@@ -16,8 +16,13 @@ Also works: ```[me@linux ~]$ sh grepLogs.sh -help```
 Also works: ```[me@linux ~]$ sh grepLogs.sh -?```
 
 # Installation
-1. In your script follow the convention below so the first 3 lines describe it. 
-1. Include this line at hte top of your script: ```source `dirname $0`/initHelp.sh```
+1. In your script follow the convention below so the first 3 comment lines give the description, arguments and example. 
+```
+#  Runs the log grepper job
+#  <regex> (<maxNumMatches>)
+#  .+ABC.+
+```
+1. Include this line in your script after the comment lines: ```source `dirname $0`/initHelp.sh```
 1. That's it!
 
 # Convention
